@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div class="bar">
+        <a class="topnav-ref" href="/main">Home</a>
+        <a class="topnav-ref" href="/games">Play</a>
+        <a class="topnav-ref" href="/contact">Contact</a>
+        <a class="topnav-ref" href="/login" style="float:right">Sign up</a>
+        <a class="topnav-ref" href="/signup" style="float:right">Log in</a>
+    </div>
+    <h1>Exercises</h1>
+    {% for game in glist %}
+        <div class="game-div">
+            <p> {{ game.name }} </p>
+            <p> {{ game.description }} </p>
+            <a class="play-ref" href="/games/{{game.link}}">Play</a>
+        </div>
+    {% endfor %}
+    <p class="coming-soon">More coming soon...</p>
+</body>
+</html>
